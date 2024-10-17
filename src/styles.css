@@ -1,67 +1,72 @@
 body > header {
-  height: 5%;
+  display: grid;
+  grid-template-columns: 20% 45% 35%;
+
+  height: 80px;
   width: 100%;
   background-color: green;
 }
 
-#bodyContainer {
-  background-color: antiquewhite;
-  height: 95%;
-  width: 100%;
-
-  display: grid;
-  grid-template-columns: 7% 93%;
+body > header h1 {
+  grid-column: 1;
+  align-self: center;
+  justify-self: center;
 }
 
-#sideBarContainer {
-  height: 100%;
-  width: 100%;
-  background-color: orange;
-
-  grid-row: 1;
-}
-
-#contentContainer {
-  height: 80%;
-  width: 35%;
-
-  background-color: aliceblue;
-
-  grid-row: 1;
+body > header #inputDiv {
   grid-column: 2;
-  justify-self: center;
-  align-self: center;
 
-  display: grid;
-
-  grid-template-areas:
-    "header header"
-    "leftCont rightCont";
-}
-
-#contentContainer div,
-#contentContainer input {
-  border: 1px solid black;
-  height: 10px;
-  width: 10px;
+  height: 40%;
+  width: 80%;
 
   align-self: center;
-  justify-self: center;
-}
-
-#contentContainer > header {
-  grid-area: header;
   justify-self: start;
 }
 
-#contentContainer input {
-  grid-area: leftCont;
+body > header #inputDiv * {
+  height: 100%;
 }
 
-#cityName {
-  grid-area: header;
+#inputDiv input {
+  width: 80%;
 }
 
-#cityTemp {
-  grid-area: rightCont;
+#inputDiv button {
+  width: 20%;
+  min-width: fit-content;
+}
+
+body > header h3 {
+  grid-column: 3;
+  align-self: center;
+  justify-self: center;
+}
+
+#contentContainerOne {
+  display: flex;
+  background-color: aliceblue;
+
+  height: 30rem;
+}
+
+#contentContainerOne * {
+  align-content: center;
+  text-align: center;
+}
+
+#basicInfo {
+  width: 40%;
+  height: 100%;
+
+  background-color: antiquewhite;
+}
+
+#moreInfo {
+  width: 60%;
+}
+
+#contentContainerTwo {
+  height: 12rem;
+  width: 100%;
+  background-color: aquamarine;
 }
